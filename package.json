@@ -8,7 +8,7 @@
     "start": "next start",
     "export": "next export",
     "lint": "next lint",
-    "test": "jest --onlyChanged",
+    "test": "jest",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "chromatic": "chromatic --exit-once-uploaded"
