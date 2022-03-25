@@ -1,12 +1,5 @@
-module.exports = {
-  "stories": [
-    "../__stories__/**/*.stories.mdx",
-    "../__stories__/**/*.stories.@(js|jsx|ts|tsx)"
-  ],
-  "addons": [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-interactions"
-  ],
-  "framework": "@storybook/react"
-}
+const { register } = require('esbuild-register/dist/node')
+register({
+  target: 'node15'
+})
+module.exports = require('./main.ts')
