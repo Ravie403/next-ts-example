@@ -5,13 +5,11 @@ on:
     types: [opened, reopened, labeled, synchronize]
     branches:
       - 'main'
-env:
-  label: ${{ join(github.event.*.labels.*.name) }}
 
 jobs:
   test:
     name: Check a label for the branch.
-    # if: ${{ contains(github.event.*.labels.*.name, 'frontend') }}
+    if: ${{ contains(github.event.*.labels.*.name, 'frontend') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
