@@ -1,0 +1,23 @@
+name: PullRequest-Frontend-Linter
+
+on:
+  pull_request:
+    types: [opened, reopened, labeled, synchronize]
+    branches:
+      - 'feature/**'
+
+jobs:
+  linter:
+    name: Check a label for the branch.
+    if: ${{ contains(github.event.*.labels.*.name, 'frontend') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Install Depenedencies
+        run: yarn install
+      - name: Run Linter
+        run: yarn lint
