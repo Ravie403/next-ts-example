@@ -1,10 +1,10 @@
-name: PullRequest-Frontend-Linter
+name: PullRequest-Frontend-Tester
 
 on:
   pull_request:
     types: [opened, reopened, labeled, synchronize]
     branches:
-      - 'feature/**'
+      - 'main'
 
 jobs:
   test:
