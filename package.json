@@ -10,7 +10,8 @@
     "lint": "next lint",
     "test": "jest --watch",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "chromatic"
   },
   "dependencies": {
     "next": "12.1.0",
@@ -40,6 +41,7 @@
     "@types/redux": "^3.6.0",
     "babel-jest": "^27.5.1",
     "babel-loader": "^8.2.3",
+    "chromatic": "^6.5.3",
     "eslint": "8.11.0",
     "eslint-config-next": "12.1.0",
     "eslint-plugin-storybook": "^0.5.7",
